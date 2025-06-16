@@ -1,0 +1,593 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Permanent Marker", serif;
+}
+
+:lang(ko) {
+    font-family: "Bagel Fat One", system-ui;
+  }
+
+
+:lang(ja) {
+    font-family: "Mochiy Pop One", sans-serif;
+  }
+
+
+a{
+text-decoration: none;
+color: white;
+}
+
+.navbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:salmon;
+    padding: 8px 12px;
+}
+.logo{
+    font-size: 24px;
+    color: white;
+}
+
+.logo a:hover{
+    color:indianred;
+    transition: 1s;
+}
+
+
+.menu{
+    position: absolute;
+    left: 50%;
+    gap: 10px;
+    transform: translateX(-50%);
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu li{
+padding: 8px 12px;
+transition: 0.3s;
+}
+.menu li:hover{
+    background-color: tomato;
+    border-radius: 4px;
+}
+
+.sns{
+    list-style: none;
+    color: white;
+    display: flex;
+}
+.sns li{
+    padding: 8px 12px;
+    cursor:pointer;
+}
+
+
+.video-track{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.video-track video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+
+
+
+
+.text-container h1{
+    font-size: 36px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    color: white;
+    text-shadow:10px 6px 1px black;
+}
+
+
+.such{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+}
+
+input[type="text"] {
+    position: relative;
+     height: 35px;
+     width: 300px;
+     border: none;
+     border-radius: 8px;
+     background-color:gainsboro;
+     padding-right: 40px;
+     color: black;
+     font-size: 16px;
+     border-bottom: 1px solid #ddd;
+   
+}
+input[type="text"]:focus{
+    outline: none;
+}
+
+input[type="submit"]{
+    position: absolute;
+    background: url(./magnifying-glass-solid.svg) center no-repeat;
+    border: none;
+    margin-left: 300px;
+    height: 21px;
+    width: 21px;
+    cursor: pointer;
+    
+}
+
+
+
+
+
+.image-gallery{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.image-container {
+    position: relative;
+    margin: 0   80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+    animation-name: any;
+    animation-duration: 3s;
+    animation-fill-mode: both;
+    animation-delay: 1s;
+}
+.image-container img{
+    width: 320px;
+}
+
+.image-container:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+.image-gallery button{
+position: absolute;
+top: 50%;
+left: 50%;
+background: url(./icon-play.png) center no-repeat;
+transform: translate(-50%,-50%);
+width: 50px;
+height: 50px;
+border: none;
+border-radius: 50%;
+background-color: blue;
+cursor: pointer;
+}
+.image-gallery button:hover{
+    background-color: tomato;
+    transition: 0.3s;
+}
+
+.swiper {
+    width: 600px;
+   
+  }
+  .swiper-slide{
+    position: relative;
+    
+}
+.swiper-slide h2{
+    position: absolute;
+    top: 60%;
+    left: 0;
+    right: 0;
+    font-size: 24px;
+    text-align: center;
+    text-shadow:3px 3px 1px black;
+    transition: 0.5s;
+    opacity: 0;
+}
+.swiper-slide-active h2{
+    top: 50%;
+    transition: 0.5s;
+    font-size: 24px;
+    opacity: 1;
+
+}
+.swiper-slide img{
+    width:599px ;
+}
+
+.mid-container{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    margin-top: 100px;
+    text-align: center;
+    text-shadow:3px 3px 1px black;
+}
+
+.mid-photo-container{
+    overflow: hidden;
+    white-space:nowrap;
+}
+
+.mid-photo{
+    display: inline-block;
+   animation: slide 45s linear infinite;
+}
+
+
+.mid-photo img{
+    width: 200px;
+    height: 200px;
+    margin: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.mid-photo img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+
+.artist-block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.artist-block-img{
+    position: relative;
+}
+.artist-block img{
+    margin: 50px;
+    border-radius: 50%;
+    width: 190px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+.artist-block img:hover{
+    transform: scale(1.1);
+    transition: 0.3s;
+    
+}
+.artist-block-img p{
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    bottom: 0;
+font-size: 20px;
+text-shadow:3px 3px 1px black;
+}
+
+
+.lp-container-text{
+    margin-top: 15%;
+}
+.lp-container-text hr{
+    position: relative;
+    justify-content: center;
+    margin-top: 1%;
+width: 350px;
+border: 2px solid salmon;
+}
+
+.lp-text{
+display: flex;
+justify-content:center;
+align-items:center;
+text-align: center;
+}
+.lp-text h1{
+    font-size: 36px;
+    color: white;
+    text-shadow:3px 3px 1px black;
+    /* padding-right: 50px; */
+}
+
+.lp-container-img{
+    height: 230px;;
+    display: flex;
+    justify-content:center;
+    margin-top: 3%;
+    margin-bottom: 5%;
+}
+.lp-img{
+    justify-content: center;
+    display: flex;
+    position: relative;
+    width: 230px;
+}
+.lp-img h1{
+    position: relative;
+    color: white;
+    font-size: 26px;
+    text-shadow:3px 3px 1px black;
+    top: 85%;
+}
+.lp-img img{
+    width: 190px;
+    border-radius: 8%;
+}
+.lp-img a{
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+}
+
+.lp-img a:nth-child(1):hover{
+    transform: translateY(-12%);
+}
+.lp-img a:nth-child(2):hover{
+    transform: translateY(-12%);
+}
+.lp-img a:nth-child(3):hover{
+    transform: translateY(-12%);
+}
+/* .lp-img a:nth-child(1):active{
+    opacity: 0.9;
+}
+.lp-img a:nth-child(2):active{
+    opacity: 0.9;
+}
+.lp-img a:nth-child(3):active{
+    opacity: 0.9;
+} */
+
+
+
+.youtube{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+.youtube iframe{
+    width: 1030px;
+    height: 580px
+}
+
+.app{
+    margin-top: 150px;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+.app h1{
+    position: absolute;
+    font-size: 22px;
+    color: white;
+    text-shadow:3px 3px 1px black;
+    left: 40px;
+    top: 40px;
+    line-height:1.5;
+}
+
+.app1{
+    position: absolute;
+    left: 20px;
+    top: 195px;
+    transition: transform 0.2s ease-in-out;
+}
+.app1:hover{
+transition: 0.3s;
+transform:scale(0.95)
+}
+
+.app2{
+    position: absolute;
+    left: 380px;
+    top: 215px;
+    transition: transform 0.2s ease-in-out;
+}
+.app2:hover{
+    transition: 0.3s;
+    transform:scale(0.95)
+    }
+
+
+.footer-container{
+    display: flex;
+    background-color:#222;
+    justify-content: space-around;
+    padding:50px 90px;
+    flex-wrap: wrap;
+    margin-top: 100px;
+}
+
+.footer-column{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+}
+.footer-column a{
+    transition: 0.3s ease-in-out;
+    font-size: 20px;
+}
+.footer-column a:hover{
+    color: chocolate;
+}
+.footer-column:nth-child(1){
+    font-size: 36px;
+    gap: 3px;
+    text-shadow:3px 3px 1px black;
+}
+.footer-column h2{
+    font-size: 26px;
+    color: white;
+    text-shadow:3px 3px 1px black;
+}
+
+.footer-hr {
+    border: 1px solid #555;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-icon{
+    display: flex;
+    margin-top: 40px;
+    gap: 30px;
+}
+.footer-icon img{
+    width: 40px;
+    background-color:white;
+    border-radius: 20%;
+    padding: 1px;
+}
+
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    color: white;
+    text-shadow:3px 3px 1px black;
+}
+
+@keyframes slide {
+    from{
+        transform: translateX(0);
+    }
+    
+    to{
+        transform: translateX(-100%);
+    }
+}
+
+
+
+@keyframes any {
+from{
+opacity: 0;
+transition: 1.1;
+}
+to{
+opacity: 1;
+transition: 1.3;
+}
+
+
+
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {                          
+	.navbar{
+        flex-direction: column;
+        top: -60px;
+        padding: 65px;
+    }
+    .menu{
+    margin-top: 45px;
+    gap: 70px;
+    }
+    .sns{
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        align-self: flex-end;
+    }
+    .image-gallery{
+        height: 300px;
+    }
+.image-container img{
+    width: 200px;
+    margin: -60px;
+}
+}
+
+
+@media screen and (max-width: 360px) {                          
+	.navbar{
+        flex-direction: column;
+        top: -60px;
+    }
+    .text-main h1{
+        font-size: 20px;
+    }
+    .menu{
+        gap: 8px;
+        font-size: 18px;
+        top: 60px;
+        
+    }
+    .menu li{
+        padding: 0 3px;
+        text-align: center;
+    }
+    .sns{
+        position: absolute;
+        top: 70px;
+        right: 3px;
+        align-self: flex-end;
+    }
+    .sns li{
+        margin: -10px;
+        font-size: 22px;
+    }
+    .image-gallery{
+        height: 350px;
+        gap: 40px;
+    }
+.image-container img{
+    width: 200px;
+    padding: 0;
+}
+.such input{
+width: 240px;
+}
+input[type="submit"]{
+    position: absolute;
+    margin-left: 245px;
+}
+}
