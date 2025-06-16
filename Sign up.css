@@ -1,0 +1,107 @@
+html,body{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+}
+
+body{
+    font-family: "Poetsen One", sans-serif;
+}
+
+
+:lang(ko) {
+    font-family: "Do Hyeon", sans-serif;
+  }
+
+:lang(ja) {
+    font-family: "RocknRoll One", sans-serif;
+  }
+
+
+.video-track{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1;
+}
+.video-track video{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    min-width: 100vw;
+    min-height: 100vh;
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+}
+
+.form-container{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    display: flex;
+    width: 400px;
+    height: 500px;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+.form-tag h2{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: start;
+    margin-bottom: 10px;
+}
+.form-tag{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.form-tag label{
+    font-size: 14px;
+}
+.form-tag input{
+    width: 350px;
+    height: 50px;
+}
+.form-tag input[type="checkbox"]{
+    width: 15px;
+    height: 15px;
+    vertical-align:middle;
+}
+.form-tag hr{
+    border: 1px solid #ccc;
+    width: 350px;
+}
+
+.form-tag button{
+    background-color: blue;
+    border-radius: 8px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 359px;
+    height: 80px;
+    font-size: 20px;
+    margin: 10px 0px;
+    transition: 0.3s ease-in-out;
+    font-family: "Poetsen One", sans-serif;
+}
+.form-tag button:hover{
+    background-color: darkblue;
+}
+
+
+

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soundmonster - Sign up</title>
+<link rel="stylesheet" href="./reset.css">
+<link rel="stylesheet" href="./Sign up.css">
+
+    <!-- 파비콘입니다 -->
+<link rel="icon" type="image/png" href="fabicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="fabicon/favicon.svg" />
+<link rel="shortcut icon" href="fabicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="fabicon/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="MyWebSite" />
+<!-- <link rel="manifest" href="/site.webmanifest" /> -->
+<!-- 파비콘입니다 -->
+
+
+<!-- 구글폰트 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Poetsen+One&family=RocknRoll+One&display=swap" rel="stylesheet">
+<!-- 구글폰트 -->
+</head>
+
+<body>
+
+    <!-- 번역기능 (한,미,일) -->
+    <div class="gtranslate_wrapper"></div>
+    <script>window.gtranslateSettings = {"default_language":"en","languages":["en","ja","ko"],"globe_color":"#66aaff","wrapper_selector":".gtranslate_wrapper","horizontal_position":"right","vertical_position":"bottom","alt_flags":{"en":"usa"},"globe_size":20}</script>
+    <script src="https://cdn.gtranslate.net/widgets/latest/globe.js" defer></script>
+    <!-- 번역기능 (한,미,일) -->
+
+
+    <!-- 회원가입 페이지 배경 -->
+    <div class="video-track">
+        <video src="./Loop Background _ Live Wallpaper _ Chilling Cat _ No Sound.mp4" 
+        muted autoplay loop></video>
+    </div>
+    <!-- 회원가입 페이지 배경 -->
+
+
+    <!-- 회원가입 폼 -->
+<div class="form-container">
+       <div class="form-box">
+
+        <form class="form-tag">
+            <h2>Sign up</h2>
+            <label for="username">username</label>
+            <input type="ID" class="usname" id="username" placeholder="username" required autocomplete="off">
+
+            <label for="password">password</label>
+            <input type="password" class="ps" id="password" placeholder="password" required autocomplete="off">
+            
+
+            <label for="email">email</label>
+            <input type="email" id="email" placeholder="Soundmonster@google.com" required autocomplete="off">
+
+            <label for="name">name</label>
+            <input type="name" id="name" placeholder="name" required autocomplete="off">
+
+            <label for="nickname">nickname</label>
+            <input type="nickname" id="nickname" placeholder="Username" required autocomplete="off">
+
+            <hr>
+
+            <label>
+                <input type="checkbox" name="agree" id="agree">
+                I agree to the Terms and Conditions.
+            </label>
+              
+            <button type="submit" id="Signbtn">Sign up</button>
+        </form>
+    
+
+       </div>
+</div>
+<!-- 회원가입 폼 -->
+
+
+<script src="./Sign up.js"></script>
+</body>
+</html>
