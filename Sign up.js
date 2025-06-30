@@ -4,10 +4,18 @@ const ps = document.querySelector(".ps");
 const usname = document.querySelector(".usname");
 
 
+usname.addEventListener("input",function(e){
+  if(!/^\S+@\S\.\S+$/.test(usname.value)){
+    e.preventDefault();
+    alert("이메일 형식으로 입력해주세요")
+    usname.value = ''
+    return;
+  }
+});
+
 usname.addEventListener("input",function(){
   if(!/^[a-zA-Z0-9]+$/.test(usname.value)){
     alert("username은 영어와 숫자로 입력해주세요")
-    usname.value = ''
     return;
   }
 });
@@ -16,8 +24,8 @@ usname.addEventListener("input",function(){
 form.addEventListener('submit', function (e) {
   e.preventDefault(); // 새로고침 방지
 
-  if(ps.value.length < 6){
-    alert("패스워드는 6자리 이상 입력해주세요")
+  if(ps.value.length < 8){
+    alert("패스워드는 8자리 이상 입력해주세요")
     return;
   }
 
